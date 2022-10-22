@@ -164,16 +164,22 @@
 		    	if(result.title !=null) {
 			    	$('#displayTitle').text(result.title);		    		
 		    	} if(result.filePath1 != null) {
-		    		$('#displayImg').prepend('<div class="swiper-slide"><img class="img-fluid rounded mb-5" src="${contextPath}/ImgDown?path='+result.filePath1+'" alt="..." onerror="this.src=\'assets/img/portfolio/safe.png\'" /></div>');
+		    		$('#displayImg').append('<div class="swiper-slide"><img class="img-fluid rounded mb-5" src="${contextPath}/ImgDown?path='+result.filePath1+'" alt="..." onerror="this.src=\'assets/img/portfolio/safe.png\'" /></div>');
 		    	} if(result.filePath2 != null) {
-		    		$('#displayImg').prepend('<div class="swiper-slide"><img class="img-fluid rounded mb-5" src="${contextPath}/ImgDown?path='+result.filePath2+'" alt="..." onerror="this.src=\'assets/img/portfolio/safe.png\'" /></div>');
+		    		$('#displayImg').append('<div class="swiper-slide"><img class="img-fluid rounded mb-5" src="${contextPath}/ImgDown?path='+result.filePath2+'" alt="..." onerror="this.src=\'assets/img/portfolio/safe.png\'" /></div>');
 		    	} if(result.filePath3 != null) {
-		    		$('#displayImg').prepend('<div class="swiper-slide"><img class="img-fluid rounded mb-5" src="${contextPath}/ImgDown?path='+result.filePath3+'" alt="..." onerror="this.src=\'assets/img/portfolio/safe.png\'" /></div>');
+		    		$('#displayImg').append('<div class="swiper-slide"><img class="img-fluid rounded mb-5" src="${contextPath}/ImgDown?path='+result.filePath3+'" alt="..." onerror="this.src=\'assets/img/portfolio/safe.png\'" /></div>');
 		    	} if(result.introduce != null) {
 			    	$('#displayIntroduce').html(result.introduce);		    		
 		    	} if(result.link != null) {
 			    	$('#displayLink').attr('href',result.link);		    		
-		    	}		    	
+		    	}
+		    	
+		    	if(table=='site_introduce' || table=='history' || table=='technology') {
+		    		$('#displayLink').css('display','none');	
+		    	} else {
+		    		$('#displayLink').css('display','block');
+		    	}	    		
 		    },
 		    error: function(result) {
 		    	alert("실패");

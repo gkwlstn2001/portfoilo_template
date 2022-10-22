@@ -26,7 +26,9 @@
 	                                    		<td>
 	                                    			<select name="table" onchange="getSeqList()" style="width:100%; text-align:center;">
 				                                    	<c:forEach var="table" items="${tables}">
-				                                    		<option value="${table}">${table}</option>
+				                                    		<c:if test="${table!='login'}">
+				                                    			<option value="${table}">${table}</option>
+				                                    		</c:if>
 				                                    	</c:forEach>                                    	
 				                                    </select>
 	                                    		</td>
