@@ -26,7 +26,7 @@
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
 		<property name="jdbcUrl" value="jdbc:mysql://192.168.35.47:49309/portfolio?useSSL=false&amp;serverTimezone=UTC" />
 		<property name="username" value="root" /> 
-		<property name="password" value="barbies3031@" /> 		
+		<property name="password" value="1234" /> 		
 	</bean>	
 
 	<!-- mybatis SqlSessionFactoryBean -->
